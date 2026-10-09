@@ -82,9 +82,10 @@
     seen(seg, loop);
   }
 
-  const film = $("#film"), video = $("#video");
+  const film = $("#player"), video = $("#video");
   if (film) {
-    $("#cover").addEventListener("click", () => { film.classList.add("playing"); video.controls = true; video.play(); });
-    video.addEventListener("ended", () => film.classList.remove("playing"));
+    $("#cover").addEventListener("click", () => { video.controls = true; video.play(); });
+    video.addEventListener("play", () => film.classList.add("playing"));
+    video.addEventListener("ended", () => { film.classList.remove("playing"); video.controls = false; });
   }
 })();
