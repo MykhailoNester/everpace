@@ -27,6 +27,7 @@
     h.classList.add("split");
   });
 
+  $$(".stagger").forEach((g) => [...g.children].forEach((c, i) => c.style.setProperty("--i", i)));
   if (shot) $$(".rv").forEach((el) => el.classList.add("in"));
   else {
     const io = new IntersectionObserver((es) => es.forEach((e) => {
