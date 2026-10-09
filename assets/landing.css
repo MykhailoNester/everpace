@@ -53,7 +53,7 @@ h2 { font-size: clamp(32px, 4.4vw, 52px); }
 .hero .sub { max-width: 600px; }
 .hero .ctas { margin-top: 36px; }
 .facts { display: flex; justify-content: center; gap: 28px; flex-wrap: wrap; margin-top: 30px; font: 500 12px var(--mono); letter-spacing: .14em; text-transform: uppercase; color: var(--faint); }
-.scene { position: relative; height: 640px; margin-top: 88px; }
+.scene { position: relative; height: 640px; margin-top: 72px; }
 .scene .phone { position: absolute; left: 50%; top: 0; margin-left: -150px; width: 300px; }
 .scene .watch { position: absolute; left: 50%; top: 250px; margin-left: -470px; width: 290px; height: 290px; }
 .scene .phone.b { margin-left: 210px; top: 90px; width: 260px; }
@@ -84,9 +84,9 @@ h2 { font-size: clamp(32px, 4.4vw, 52px); }
 .live .stats b { display: block; color: #fff; font: 500 6.6cqw/1.2 var(--mono); }
 
 /* chapters, like the app's intro: label, title, one line */
-section { padding: 150px 0; }
-@media (max-width: 760px) { section { padding: 100px 0; } }
-.chapter .head { max-width: 640px; margin: 0 auto 72px; text-align: center; }
+section { padding: 72px 0; }
+@media (max-width: 760px) { section { padding: 52px 0; } }
+.chapter .head { max-width: 640px; margin: 0 auto 52px; text-align: center; }
 .chapter h2 { margin: 18px 0 14px; }
 .duo { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; max-width: 920px; margin: 0 auto; }
 @media (max-width: 860px) { .duo { grid-template-columns: 1fr; gap: 48px; } }
@@ -115,7 +115,7 @@ section { padding: 150px 0; }
 .dial { width: min(400px, 80vw); height: min(400px, 80vw); margin: 0 auto; padding: 16px; }
 .dial img { opacity: 0; transition: opacity .5s var(--ease); }
 .dial img.on { opacity: 1; }
-.caption { margin-top: 44px; color: var(--muted); min-height: 54px; }
+.caption { margin-top: 32px; color: var(--muted); min-height: 28px; }
 
 /* records */
 .pair { display: flex; justify-content: center; gap: 36px; }
