@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Everpace: WOD log and PR tracker for Garmin</title>
-<meta name="description" content="Paste the workout from your gym. Everpace runs it on your Garmin watch, round by round, and keeps every load, score and personal record on your phone.">
-<meta name="theme-color" content="#0B0C0E">
-<meta property="og:title" content="Everpace: the whiteboard, on your wrist">
-<meta property="og:description" content="Paste your gym's WOD, run it on your Garmin, keep every PR. No account, no ads.">
+<meta name="description" content="Paste your gym's workout. Everpace runs it on your Garmin watch, set by set, and keeps every load, score and personal record on your phone.">
+<meta name="theme-color" content="#0C0D0F">
+<meta property="og:title" content="Everpace">
+<meta property="og:description" content="Paste your gym's workout, run it on your Garmin, beat last time.">
 <meta property="og:image" content="assets/img/icon-192.png">
 <link rel="icon" href="assets/img/favicon.png">
 <link rel="preload" href="assets/fonts/manrope_variable.ttf" as="font" type="font/ttf" crossorigin>
@@ -18,227 +18,169 @@
 <header class="nav" id="nav">
   <div class="wrap">
     <a class="brand" href="#top"><img src="assets/img/icon-192.png" alt="">Everpace</a>
-    <nav><a href="#how">How it works</a><a href="#watch">On the watch</a><a href="#records">Records</a><a href="#pro">Pro</a><a href="#faq">FAQ</a></nav>
-    <a class="btn primary small" href="#get">Get Everpace</a>
+    <nav><a href="#paste">Paste</a><a href="#watch">Watch</a><a href="#records">Records</a><a href="#pro">Pro</a><a href="#faq">FAQ</a></nav>
+    <a class="btn outline small" href="#get">Get the app</a>
   </div>
 </header>
 
 <main id="top">
 
-<section class="hero">
+<section class="hero center">
   <div class="wrap">
-    <div>
-      <div class="kicker rv">WOD log · Garmin watch app · Android</div>
-      <h1 class="rv d1">The whiteboard,<br><span class="accent">on your wrist.</span></h1>
-      <p class="lead rv d2">Paste the workout from your gym. Everpace runs it on your Garmin, round by round, with the weight to lift and the time to beat, and keeps every load, score and PR on your phone.</p>
-      <div class="ctas rv d3" id="get">
-        <a class="btn primary" href="#get" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3 13.8 12 3.6 21.7a1.5 1.5 0 0 1-.6-1.2V3.5c0-.5.2-.9.6-1.2Zm11.6 11.1 2.5 2.4-11 6.3 8.5-8.7Zm4.4-2.6c.9.5.9 1.8 0 2.4l-2.3 1.3-2.7-2.5 2.7-2.6 2.3 1.4ZM6.7 1.9l11 6.3-2.5 2.4L6.7 1.9Z"/></svg>Google Play · soon</a>
-        <a class="btn ghost" href="#watch"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="6"/><path d="M9 3h6M9 21h6M12 9v3l2 1"/></svg>Watch app for Garmin</a>
-      </div>
-      <div class="trust rv d3"><span>No account</span><span>No ads</span><span>Works offline</span><span>50+ Garmin watches</span></div>
+    <div class="kicker rv">WOD log for Garmin</div>
+    <h1 class="rv d1">Paste your gym's workout.<br>Run it on your wrist.</h1>
+    <p class="sub rv d2">Everpace turns the workout your coach sends into a plan, runs it on your Garmin set by set, and keeps every load, score and PR, so you always know what to beat.</p>
+    <div class="ctas rv d3" id="get">
+      <a class="btn primary" href="#get" aria-disabled="true"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.6 2.3 13.8 12 3.6 21.7a1.5 1.5 0 0 1-.6-1.2V3.5c0-.5.2-.9.6-1.2Zm11.6 11.1 2.5 2.4-11 6.3 8.5-8.7Zm4.4-2.6c.9.5.9 1.8 0 2.4l-2.3 1.3-2.7-2.5 2.7-2.6 2.3 1.4ZM6.7 1.9l11 6.3-2.5 2.4L6.7 1.9Z"/></svg>Google Play <span class="soon">· soon</span></a>
+      <a class="btn outline" href="#watch">Garmin watch app</a>
     </div>
-    <div class="stage" id="stage">
-      <div class="phone fade d2" data-depth="12"><img src="assets/img/read.webp" alt="A pasted workout read into a plan in the Everpace app"></div>
-      <div class="watch fade d3" data-depth="26" aria-label="The Everpace watch app running an EMOM">
-        <div class="face" id="face">
-          <svg class="ring" viewBox="0 0 100 100"><circle cx="50" cy="50" r="47.5" fill="none" stroke="#1d2024" stroke-width="2.2"/><circle id="ring" cx="50" cy="50" r="47.5" fill="none" stroke="#B49BC4" stroke-width="2.2" stroke-linecap="round" stroke-dasharray="298.45" stroke-dashoffset="0"/></svg>
-          <div class="lines">
-            <div class="t1" id="fTitle">EMOM 4/10</div>
-            <div class="t2" id="fClock">0:42</div>
-            <div class="t3" id="fNext">Minute 4 of 10</div>
-            <div class="mv on" id="fMv1"><span>Power Clean</span><span>3 · 70kg</span></div>
-            <div class="mv off" id="fMv2"><span>Burpee</span><span>8</span></div>
-          </div>
-          <div class="stats"><div class="hr">HR<b id="fHr">148</b></div><div>TIME<b id="fTime">3:18</b></div><div>KCAL<b id="fKcal">41</b></div></div>
-          <div class="flash" id="flash"></div>
+    <div class="facts rv d3"><span>No account</span><span>No ads</span><span>Works offline</span></div>
+    <div class="scene rv d2" aria-hidden="true">
+      <div class="phone"><img src="assets/img/read.webp" alt=""></div>
+      <div class="phone b"><img src="assets/img/session.webp" alt=""></div>
+      <div class="watch"><div class="face live">
+        <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="47.5" fill="none" stroke="#1d2024" stroke-width="2"/><circle id="ring" cx="50" cy="50" r="47.5" fill="none" stroke="#B49BC4" stroke-width="2" stroke-linecap="round" stroke-dasharray="298.45" stroke-dashoffset="0"/></svg>
+        <div class="lines">
+          <div class="t1" id="fTitle">EMOM 4/10</div>
+          <div class="t2" id="fClock">0:42</div>
+          <div class="mv on" id="fMv1"><span>Power Clean</span><span>3 · 70kg</span></div>
+          <div class="mv" id="fMv2"><span>Burpee</span><span>8</span></div>
         </div>
-      </div>
+        <div class="stats"><div>HR<b id="fHr">148</b></div><div>TIME<b id="fTime">3:18</b></div><div>KCAL<b id="fKcal">41</b></div></div>
+      </div></div>
     </div>
   </div>
 </section>
 
-<section id="how" class="rule">
+<section id="paste" class="chapter">
   <div class="wrap">
     <div class="head">
       <div class="kicker rv">01 · Paste</div>
-      <h2 class="rv d1">Paste it. Everpace reads it.</h2>
-      <p class="lead rv d2">Copy the workout from the group chat, the gym's app or the whiteboard photo you typed up. Movements, reps, loads, rounds and the format come out as a plan you can run. Anything it can't read stays on the page as text, so nothing gets lost.</p>
+      <h2 class="rv d1">Paste your gym's workout</h2>
+      <p class="sub rv d2">It becomes a plan. Movements, reps, loads and the format are read for you; anything Everpace can't read stays as text, so nothing is lost.</p>
     </div>
-    <div class="reader" id="reader">
+    <div class="duo">
       <div class="card rv">
-        <div class="label"><span class="kicker muted">From your coach</span><span class="chip">Pasted</span></div>
-        <div class="note" id="note" aria-label="A workout as a coach writes it"></div>
+        <div class="cap"><span class="kicker">From your coach</span><span class="badge" id="pct">Reading…</span></div>
+        <div class="paste" id="paste-text" aria-label="A workout as a coach writes it"></div>
       </div>
-      <div class="arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12h15M13 6l6 6-6 6"/></svg></div>
-      <div class="card rv d2" id="plan">
-        <div class="label"><span class="kicker muted">Everpace reads</span><span class="chip ok" id="readPct">0% read</span></div>
-        <div class="block"><h4>Strength</h4><div class="meta">Sets · 5 · building to 80%</div>
-          <div class="row"><i style="background:var(--machine)"></i><span>Back Squat</span><span class="v">5 reps · 70–80%</span></div></div>
-        <div class="block"><h4>Metcon</h4><div class="meta">AMRAP · 12 min</div>
-          <div class="row"><i style="background:var(--machine)"></i><span>Row</span><span class="v">12 cal</span></div>
-          <div class="row"><i style="background:var(--muted)"></i><span>Wall Ball</span><span class="v">15 · 9/6 kg</span></div>
-          <div class="row"><i style="background:var(--gym)"></i><span>Toes-to-Bar</span><span class="v">10</span></div></div>
-        <div class="block"><h4>Finisher</h4><div class="meta">For time · cap 6:00</div>
-          <div class="row"><i style="background:var(--gym)"></i><span>Double Under</span><span class="v">50</span></div></div>
+      <div class="swap rv d1" id="swap">
+        <div class="phone"><img src="assets/img/plan.webp" alt="The plan in Everpace" loading="lazy"><img src="assets/img/read.webp" alt="Everpace's read of the pasted workout" loading="lazy"></div>
       </div>
-    </div>
-    <div class="steps">
-      <div class="rv"><b>EMOM · AMRAP · FOR TIME</b><h3>Every format</h3><p>Chippers, ladders, work/rest intervals, building sets, partner rounds written as text.</p></div>
-      <div class="rv d1"><b>147 MOVEMENTS</b><h3>Gym language</h3><p>C2B, T2B, KBS, HSPU, "pwr clean", Rx/scaled weights, male/female loads.</p></div>
-      <div class="rv d2"><b>YOUR CALL</b><h3>Check, then train</h3><p>Fix a line with two taps, or build the session by hand. The plan goes to the watch.</p></div>
     </div>
   </div>
 </section>
 
-<section id="watch" class="rule">
+<section id="watch" class="chapter">
   <div class="wrap">
     <div class="head">
       <div class="kicker rv">02 · Train</div>
-      <h2 class="rv d1">Hands on the bar. The plan on your wrist.</h2>
-      <p class="lead rv d2">The watch runs each part for you: the clock, the round, the next movement and the weight. Buttons adjust what you actually did. Heart rate and time are recorded throughout, and the workout goes back to your phone when you finish.</p>
+      <h2 class="rv d1">Run it on your wrist</h2>
+      <p class="sub rv d2">Every set, hands free. The clock, the round, the next movement and the weight to lift, with heart rate the whole way. It lands back on your phone when you finish.</p>
     </div>
-    <div class="modes" id="modes">
-      <div class="tabs" role="tablist">
-        <button class="tab on" role="tab" data-img="emom"><h3>EMOM</h3><p>Every minute on the minute, with the work for this minute and the one coming up.</p><span class="bar"><i></i></span></button>
-        <button class="tab" role="tab" data-img="set"><h3>Strength sets</h3><p>The weight to lift, the reps, and what you did last time. Adjust with the buttons.</p><span class="bar"><i></i></span></button>
-        <button class="tab" role="tab" data-img="amrap"><h3>AMRAP</h3><p>Rounds and reps counted as you go, with the movement you're on highlighted.</p><span class="bar"><i></i></span></button>
-        <button class="tab" role="tab" data-img="rest"><h3>Rest</h3><p>A countdown that tells you what's next and how heavy.</p><span class="bar"><i></i></span></button>
-        <button class="tab" role="tab" data-img="board"><h3>Score</h3><p>Rounds + reps or time, top set and totals the moment you finish.</p><span class="bar"><i></i></span></button>
-      </div>
-      <div class="dial rv d1">
-        <div class="halo"></div>
-        <div class="bezel"><div>
-          <img class="on" data-k="emom" src="assets/img/w-emom.webp" alt="EMOM on the watch">
-          <img data-k="set" src="assets/img/w-set.webp" alt="A strength set with last time on the watch" loading="lazy">
-          <img data-k="amrap" src="assets/img/w-amrap.webp" alt="AMRAP on the watch" loading="lazy">
-          <img data-k="rest" src="assets/img/w-rest.webp" alt="Rest countdown on the watch" loading="lazy">
-          <img data-k="board" src="assets/img/w-board.webp" alt="Score board on the watch" loading="lazy">
-        </div></div>
-        <div class="ticks"></div>
+    <div class="seg-wrap rv">
+      <div class="seg" role="tablist" id="seg">
+        <button class="on" data-k="emom" data-c="Every minute on the minute: this minute's work and the next.">EMOM</button>
+        <button data-k="set" data-c="The weight, the reps and what you did last time. Adjust with the buttons.">Sets</button>
+        <button data-k="amrap" data-c="Rounds and reps counted as you go, the current movement highlighted.">AMRAP</button>
+        <button data-k="rest" data-c="Rest that counts down and tells you what's next.">Rest</button>
+        <button data-k="board" data-c="Your score the moment you finish: rounds + reps or time.">Score</button>
       </div>
     </div>
+    <div class="watch dial rv d1"><div class="face">
+      <img class="on" data-k="emom" src="assets/img/w-emom.webp" alt="EMOM on the watch">
+      <img data-k="set" src="assets/img/w-set.webp" alt="A strength set on the watch" loading="lazy">
+      <img data-k="amrap" src="assets/img/w-amrap.webp" alt="AMRAP on the watch" loading="lazy">
+      <img data-k="rest" src="assets/img/w-rest.webp" alt="Rest on the watch" loading="lazy">
+      <img data-k="board" src="assets/img/w-board.webp" alt="Score on the watch" loading="lazy">
+    </div></div>
+    <p class="caption center" id="caption">Every minute on the minute: this minute's work and the next.</p>
   </div>
 </section>
 
-<section id="records" class="rule">
-  <div class="wrap records">
-    <div>
-      <div class="kicker rv">03 · Keep</div>
-      <h2 class="rv d1">Know exactly what to beat.</h2>
-      <p class="lead rv d2">Every set is compared with the last time you did it. Your PR book fills itself from what you actually lifted, and every attempt at a WOD sits side by side.</p>
-      <ul class="list rv d2">
-        <li><span><b>PR book</b>: 1, 3 and 5 rep maxes, max reps, best times and scores, Rx or scaled.</span></li>
-        <li><span><b>Benchmarks built in</b>: Fran, Grace, Helen, Murph and more. Paste one and it lands on its own history.</span></li>
-        <li><span><b>Last time, on the bar</b>: the watch shows what you did last time before you lift.</span></li>
-      </ul>
-      <div class="figures rv d3">
-        <div><b data-count="16">0</b><span>benchmark WODs</span></div>
-        <div><b data-count="147">0</b><span>movements</span></div>
-        <div><b data-count="8">0</b><span>languages</span></div>
-      </div>
-    </div>
-    <div class="shot rv d1">
-      <div class="phone"><img src="assets/img/fran.webp" alt="Every Fran attempt compared in Everpace" loading="lazy"></div>
-      <div class="float pr">Your best · Fran<b>4:03</b></div>
-      <div class="float dl">vs last attempt<b>−11 s</b></div>
-      <div class="float ls">Back Squat · 5RM<b>+2.5 kg</b></div>
-    </div>
-  </div>
-</section>
-
-<section id="film" class="rule">
+<section id="records" class="chapter">
   <div class="wrap">
     <div class="head">
-      <div class="kicker rv">In 40 seconds</div>
-      <h2 class="rv d1">Paste, train, beat last time.</h2>
+      <div class="kicker rv">03 · Keep</div>
+      <h2 class="rv d1">Beat last time</h2>
+      <p class="sub rv d2">Every set compared, PRs kept. Your records fill themselves from what you actually lifted, and every attempt at a WOD sits side by side.</p>
+    </div>
+    <div class="pair">
+      <div class="phone rv"><img src="assets/img/squat.webp" alt="Back Squat: 5RM, progress and every attempt" loading="lazy"></div>
+      <div class="phone rv d2"><img src="assets/img/fran.webp" alt="Fran: best time and every attempt" loading="lazy"></div>
+    </div>
+    <div class="notes">
+      <div class="rv"><h3>PR book</h3><p>Rep maxes, max reps, best times and scores. Rx and scaled kept apart.</p></div>
+      <div class="rv d1"><h3>Benchmarks</h3><p>Fran, Grace, Helen, Murph and more. Paste one and it lands on its own history.</p></div>
+      <div class="rv d2"><h3>Last time, on the bar</h3><p>The watch shows what you lifted last time, before you lift.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="film" class="chapter">
+  <div class="wrap">
+    <div class="head">
+      <div class="kicker rv">In the gym</div>
+      <h2 class="rv d1">From the whiteboard to a new PR</h2>
     </div>
     <div class="film rv" id="film">
       <video id="video" src="assets/video/everpace-promo.mp4" poster="assets/img/promo-poster.webp" preload="none" playsinline></video>
-      <div class="cover" id="cover">
-        <div class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></div>
-        <div class="caption"><div><div class="kicker">Watch the walkthrough</div><h3>From the coach's text to a new PR.</h3></div></div>
-      </div>
+      <div class="cover" id="cover"><div class="play"><svg viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></svg></div></div>
     </div>
   </div>
 </section>
 
-<section id="pro" class="rule">
+<section id="pro" class="chapter">
   <div class="wrap">
     <div class="head">
       <div class="kicker rv">Free, with Pro</div>
-      <h2 class="rv d1">Everything you log stays free. For good.</h2>
-      <p class="lead rv d2">Pro is how far back you can look. Start with 14 days free on the yearly plan, and cancel any time in Google Play.</p>
+      <h2 class="rv d1">Everything you log stays free</h2>
+      <p class="sub rv d2">Pro is how far back you can look. 14 days free on the yearly plan; cancel any time in Google Play.</p>
     </div>
     <div class="plans">
       <div class="plan rv">
-        <h3>Everpace</h3>
-        <div class="price"><b>$0</b><span>forever</span></div>
-        <p class="sub">The whole training loop.</p>
-        <ul class="list">
-          <li><span>Paste or build workouts, unlimited</span></li>
-          <li><span>The Garmin watch app, every format</span></li>
-          <li><span>History, PR book and benchmarks</span></li>
-          <li><span>Comparisons with the last 90 days</span></li>
-        </ul>
+        <div class="top"><h3>Everpace</h3></div>
+        <div class="price"><b>$0</b><span>for good</span></div>
+        <p class="small">The whole training loop.</p>
+        <ul><li>Paste or build any workout</li><li>Garmin watch app, every format</li><li>History, PR book and benchmarks</li><li>Comparisons over the last 90 days</li></ul>
       </div>
       <div class="plan pro rv d1">
-        <h3>Everpace Pro <span class="tag">Launch price</span></h3>
+        <div class="top"><h3>Everpace Pro</h3><span class="badge">Launch price</span></div>
         <div class="price"><b>$19.99</b><span>a year · or $2.99 a month</span></div>
-        <p class="sub">14 days free on the yearly plan.</p>
-        <ul class="list">
-          <li><span>Full history and trends, no 90-day limit</span></li>
-          <li><span>Estimated 1RM and strength curves</span></li>
-          <li><span>Heart-rate zones for every part</span></li>
-          <li><span>WOD pace against every attempt</span></li>
-        </ul>
+        <p class="small">14 days free on the yearly plan.</p>
+        <ul><li>Full history, no 90-day limit</li><li>Estimated 1RM and strength curves</li><li>Heart-rate zones for every part</li><li>WOD pace against every attempt</li></ul>
       </div>
     </div>
   </div>
 </section>
 
-<section class="band">
+<section class="chapter">
   <div class="wrap">
-    <h2 class="rv">Your training is yours.</h2>
-    <div class="rv d1"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M10 18h4"/></svg><h3>Stays on your phone</h3><p>Workouts, loads, heart rate and notes live on your device. No account to make.</p></div>
-    <div class="rv d2"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M5.6 5.6l12.8 12.8"/></svg><h3>No ads, no data sold</h3><p>No advertising ID, no tracking for ads. Usage statistics only if you say yes.</p></div>
-    <div class="rv d3"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8"><path d="M3 12a9 9 0 0 1 15-6.7M21 12a9 9 0 0 1-15 6.7"/><path d="M18 2v4h-4M6 22v-4h4"/></svg><h3>Works offline</h3><p>Plans are stored on the watch. Train in a basement box with no signal.</p></div>
-  </div>
-</section>
-
-<section id="devices">
-  <div class="wrap split">
-    <div>
-      <div class="kicker rv">Garmin</div>
-      <h2 class="rv d1">On the watch you already wear.</h2>
-      <p class="lead rv d2">More than fifty Garmin models, from Forerunner to fēnix. Install it from the Connect IQ store; the Android app pairs with it in a minute.</p>
-    </div>
-    <div class="devices rv d2">
-      <span>fēnix 9</span><span>fēnix 8</span><span>fēnix 8 Pro</span><span>fēnix 7 · 7S · 7X</span><span>fēnix E</span><span>epix Pro</span><span>epix (Gen 2)</span>
-      <span>Forerunner 970</span><span>Forerunner 965</span><span>Forerunner 955</span><span>Forerunner 570</span><span>Forerunner 265</span><span>Forerunner 255</span><span>Forerunner 170 · 165 · 70</span>
-      <span>Venu 4 · Venu 3</span><span>vívoactive 6 · 5</span><span>Instinct 3 AMOLED</span><span>Enduro 3 · 2</span><span>tactix 8 · 7</span><span>MARQ (Gen 2)</span><span>D2 Mach 1 Pro · Air X15</span>
+    <div class="trio">
+      <div class="rv"><div class="kicker">Private</div><h3 style="margin-top:14px">Stays on your phone</h3><p>Workouts, loads, heart rate and notes live on your device. No account to make.</p></div>
+      <div class="rv d1"><div class="kicker">Honest</div><h3 style="margin-top:14px">No ads, no data sold</h3><p>No advertising ID. Usage statistics only if you say yes.</p></div>
+      <div class="rv d2"><div class="kicker">Offline</div><h3 style="margin-top:14px">Works without signal</h3><p>Plans are stored on the watch. Fifty-plus Garmin models: fēnix, Forerunner, epix, Venu, vívoactive, Instinct, Enduro, tactix, MARQ.</p></div>
     </div>
   </div>
 </section>
 
-<section id="faq" class="rule">
+<section id="faq" class="chapter">
   <div class="wrap">
-    <div class="head"><div class="kicker rv">FAQ</div><h2 class="rv d1">Questions, answered.</h2></div>
+    <div class="head"><div class="kicker rv">FAQ</div><h2 class="rv d1">Questions</h2></div>
     <div class="faq rv">
-      <details><summary>Do I need a Garmin watch?</summary><p>No. You can log every workout on the phone; records, history and comparisons work the same. The watch makes it hands-free.</p></details>
-      <details><summary>Which phones are supported?</summary><p>Android, from the Google Play store. An iPhone version is in testing and will follow.</p></details>
-      <details><summary>Does it work with my gym's programming?</summary><p>If you can copy it as text, Everpace can read it: group chats, gym apps, websites or your own notes. Lines it can't read stay as text and can be fixed in two taps.</p></details>
-      <details><summary>What happens to my data?</summary><p>It stays on your phone. Everpace has no accounts and no ads. Crash reports can be turned off, and usage statistics are only sent if you agree. <a href="privacy/" style="color:var(--gain)">Privacy policy</a>.</p></details>
-      <details><summary>What does Pro cost, and how do I cancel?</summary><p>$19.99 a year or $2.99 a month at the launch price, billed by Google Play, with 14 days free on the yearly plan. Cancel any time in Google Play; Pro stays until the end of what you paid for.</p></details>
+      <details><summary>Do I need a Garmin watch?</summary><p>No. You can log every workout on the phone; records, history and comparisons work the same. The watch makes it hands free.</p></details>
+      <details><summary>Which phones are supported?</summary><p>Android, from Google Play. An iPhone version is in testing and follows.</p></details>
+      <details><summary>Will it read my gym's programming?</summary><p>If you can copy it as text, Everpace can read it: group chats, gym apps, websites or your own notes. Lines it can't read stay as text and can be fixed in two taps.</p></details>
+      <details><summary>What happens to my data?</summary><p>It stays on your phone. Everpace has no accounts and no ads. Crash reports can be turned off, and usage statistics are only sent if you agree. <a href="privacy/">Privacy policy</a>.</p></details>
+      <details><summary>What does Pro cost?</summary><p>$19.99 a year or $2.99 a month at the launch price, billed by Google Play, with 14 days free on the yearly plan. Cancel any time; Pro stays until the end of what you paid for.</p></details>
     </div>
   </div>
 </section>
 
-<section class="final">
+<section class="center" style="padding-top:40px">
   <div class="wrap">
-    <div class="kicker rv">Everpace</div>
-    <h2 class="rv d1">Train the whiteboard. Keep every rep.</h2>
-    <p class="lead rv d2">Free on Android, with the watch app for Garmin.</p>
-    <div class="ctas rv d3"><a class="btn primary" href="#get">Google Play · soon</a><a class="btn ghost" href="mailto:nester.mykhailo@gmail.com">Contact</a></div>
+    <h2 class="rv">Train it. Keep it. Beat it.</h2>
+    <div class="ctas rv d1" style="margin-top:32px"><a class="btn primary" href="#get">Google Play <span class="soon">· soon</span></a><a class="btn outline" href="mailto:nester.mykhailo@gmail.com">Contact</a></div>
   </div>
 </section>
 
