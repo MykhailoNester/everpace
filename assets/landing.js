@@ -2,6 +2,7 @@
   // ?shot: everything shown at once, for static captures of the page.
   const shot = new URLSearchParams(location.search).has("shot");
   const reduce = shot || matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (shot) document.documentElement.classList.add("shot");
   const $ = (s, r = document) => r.querySelector(s);
   const $$ = (s, r = document) => [...r.querySelectorAll(s)];
   const seen = (el, fn, threshold = .3) => {

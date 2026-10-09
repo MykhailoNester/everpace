@@ -43,7 +43,6 @@ h2 { font-size: clamp(32px, 4.4vw, 52px); }
 .btn.outline:hover { border-color: var(--muted); }
 .btn.small { height: 40px; padding: 0 18px; font-size: 14px; }
 .btn svg { width: 18px; height: 18px; }
-.btn .soon { color: #5f6469; font-weight: 400; }
 .ctas { display: flex; gap: 12px; flex-wrap: wrap; }
 .center .ctas { justify-content: center; }
 
@@ -263,6 +262,7 @@ footer a:hover { color: var(--text); }
 details::details-content { height: 0; overflow: clip; transition: height .4s var(--ease), content-visibility .4s allow-discrete; }
 details[open]::details-content { height: auto; }
 
+.shot *, .shot *::before, .shot *::after { transition: none !important; animation: none !important; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .rv, .stagger > *, .split .w > span, .scene > *, .phone > img:first-child, .dial img { opacity: 1 !important; transform: none !important; transition: none !important; filter: none !important; scale: 1 !important; translate: none !important; clip-path: none !important; }
